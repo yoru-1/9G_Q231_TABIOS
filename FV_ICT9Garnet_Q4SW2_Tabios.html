@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Time Converter</title>
+	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	 <style type="text/css">
+	 	body{
+		background-image: url(https://i.pinimg.com/originals/b5/a6/ca/b5a6caefe8a5f60c9200e6858ac7acbd.jpg);
+		background-repeat: no-repeat;
+    	background-attachment: fixed;
+    	background-size: cover;}
+		}
+		text {
+		text-align: center;
+		}
+		.center {
+  		margin-left: auto;
+ 		 margin-right: auto;
+		}
+
+		.center th{
+	padding: 40px;
+		}	
+		
+</style>
+</head>
+<center> <body>
+	<br>
+	<br>
+	<br>
+	<br>
+	<center> <h1 style="background: center; background-color:white ;font-family:fantasy;color:#b0e0e6 "> -Time Converter Premium-</h1>
+	<br>
+	<br>
+	<br>
+	<br>
+	<table class="center">
+	<br>
+
+	<tbody>
+		<tr>
+		<th style="background-color:#BDEDFF;" class="text"> <center> Seconds </center>
+			 <center> <p><input type="text" id="second"></p> </center>
+			<input type="button" class="btn btn-primary" onclick="sectomin()" value="Minutes">
+			<input type="button" class="btn btn-primary" onclick="sectohr()" value="Hours">
+			<input type="button" class="btn btn-primary" onclick="sectod()" value="Days">
+		</th>
+		</tr>
+</tbody></table>
+<table class="center">
+	<br>
+	<tbody>
+		<tr>
+		<th style="background-color:#3BB9FF;"> <center> Minutes </center>
+			<center> <p><input type="text" id="minute"></p> </center>
+			<input type="button" class="btn btn-danger" onclick="mintosec()" value="Seconds">
+			<input type="button" class="btn btn-danger" onclick="mintohr()" value="Hours">
+			<input type="button" class="btn btn-danger" onclick="mintod()" value="Days">
+		</th>
+	</tr>
+</tbody></table>
+<table class="center">
+	<br>
+	<tbody>
+		<tr>
+		<th style="background-color:#BDEDFF;"> <center> Hours </center>
+			<center> <p name><input type="text" id="hour"></p> </center>
+			<input type="button" class="btn btn-primary" onclick="hrtos()" value="Seconds">
+			<input type="button" class="btn btn-primary" onclick="hrtom()" value="Minutes">
+			<input type="button" class="btn btn-primary" onclick="hrtod()" value="Days">
+		</th>
+	</tr>
+</tbody></table>
+<table class="center">
+<br>
+	<tbody>
+		<tr>
+		<th style="background-color:#3BB9FF;"> <center> Days </center>
+			<center> <p><input type="text" id="day"></p> </center>
+			<input type="button" class="btn btn-success" onclick="dts()" value="Seconds">
+			<input type="button" class="btn btn-success" onclick="dtm()" value="Minutes">
+			<input type="button" class="btn btn-success" onclick="dth()" value="Hours">
+		</tr>
+		</th>
+	</tbody>
+</table>
+<script>
+	function sectomin(){
+		x = (document.getElementById('second').value);
+		y = 60;		
+		alert(x / y);
+	}
+	function sectohr(){
+		x = (document.getElementById('second').value);
+		y = 3600;		
+		alert(x / y);
+	}
+
+	function sectod(){ 
+		x = (document.getElementById('second').value);
+		y = 86400;		
+		alert(x / y);
+	}
+
+
+	function mintosec(){
+		x = (document.getElementById('minute').value);
+		y = 60;		
+		alert(x * y);
+	}
+	function mintohr(){
+		x = (document.getElementById('minute').value);
+		y = 60;		
+		alert(x / y);
+	}
+	function mintod(){
+		x = (document.getElementById('minute').value);
+		y = 1440;		
+		alert(x / y);
+	}
+
+
+	function hrtos(){
+		x = (document.getElementById('hour').value);
+		y = 3600;		
+		alert(x * y);
+	}
+	function hrtom(){
+		x = (document.getElementById('hour').value);
+		y = 60;		
+		alert(x * y);
+	}
+	function hrtod(){
+		x = (document.getElementById('hour').value);
+		y = 24;		
+		alert(x / y);
+	}
+
+
+	function dts(){
+		x = (document.getElementById('day').value);
+		y = 86400;		
+		alert(x * y);
+	}
+	function dtm(){
+		x = (document.getElementById('day').value);
+		y = 1440;		
+		alert(x * y);
+	}
+	function dth(){
+		x = (document.getElementById('day').value);
+		y = 24;		
+		alert(x * y);
+	}
+</script>
+</body> </center>
+</html>
