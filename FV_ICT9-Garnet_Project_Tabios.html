@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Obri's Unit Converter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style type="text/css">
+    
+   
+        body, html {
+            background-image: url("https://i.pinimg.com/originals/19/0b/af/190bafd48260b5718c632715d0ba8a03.jpg");
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-info navbar-dark" >
+    <a class="navbar-brand" href="#">ConversionCalculator.com</a>
+</nav>
+    <div class="container" align="center">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.vdvhE8TZT08dl-NY0tbrTwHaEK&pid=Api&P=0&h=180" width="370px" class="rounded mx-auto d-block"><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+              <th> <center> <h1 style="color:#b0c4de; font-size: 30px"> Value </h1> </center> </th>
+                <input type="number" class="form-control" id="millimeters" placeholder="Millimeter">
+            </div>
+            <div class="col-sm-6">
+             <th> <center> <h1 style="color:#b0c4de; font-size: 30px"> Unit </h1> </center> </th>
+                <select class="form-control" id="unit">
+                    <option value="centimeters">Centimeters</option>
+                    <option value="meters">Meters</option>
+                    <option value="kilometers">Kilometers</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <br>
+                <center> <h1 style="background: center;font-family:fantasy;color:#002147"> -Submit below-</h1>
+                <input type="button" class="btn btn-outline-light" onclick="convertLength()" value="Submit">
+                <br><br>
+                 <th> <center> <h1 style="color:#b0c4de; font-size: 30px"> Results </h1> </center> </th>
+                <input class="form-control" type="text" id="result" aria-label="Disabled input example" disabled>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function convertLength() {
+            var millimeters = parseFloat(document.getElementById("millimeters").value);
+            var unit = document.getElementById("unit").value;
+            var result;
+
+            if (unit === "centimeters") {
+                result = (millimeters / 10).toFixed(10);
+            } else if (unit === "meters") {
+                result = (millimeters / 1000).toFixed(10);
+            } else if (unit === "kilometers") {
+                result = (millimeters / 1000000).toFixed(10);
+            } else {
+                result = 0;
+            }
+
+            document.getElementById("result").value = result;
+        }
+    </script>
+</body>
+</html>
